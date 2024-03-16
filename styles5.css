@@ -46,8 +46,9 @@ body {
   margin-top: 100px;
 }
 
-#inspiration {
+#overview {
   height: auto;
+  padding-top: 30px;
 }
 
 #projects {
@@ -170,6 +171,8 @@ footer {
 #showoff-container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  gap: 15px;
 }
 
 #final-desktop {
@@ -181,4 +184,10 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.showoff-img {
+  height: 400px;
+  width: auto;
+  border-radius: 25px;
 }
