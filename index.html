@@ -51,100 +51,72 @@
       <p>Under construction!</p>
     </section> -->
     <section id="sketches">
-      <h2>Sketches & Lo-fi</h2>
+      <h2>Metrics & Analysis</h2>
 
       <div id="about-container" style="flex-direction: column">
-        <div id="about-image">
-          <img
-            style="width: 500px"
-            id="about-me-image"
-            src="img/speed_sketches.png"
-          />
-          <img style="width: 500px" src="img/final_sketch.png" alt="" />
-        </div>
         <div id="about-text">
           <p>
-            Once I identified the key problems with the original website, I made
-            a series of speed sketches culminating in a final sketch. My goal
-            was to simplify the structure of the menu, so I ditched the
-            slideshow on the original website and used a simple grid for the
-            menu.
+            The metrics I chose to analyze were:
+            <ol>
+              <li>Misclick rate (the frequency with which users click something else on the page before finding the correct button for the task)</li>
+              <li>Time on page (time spent on the webpage for each user group)</li>
+              <li>Mouse move distance (the amount they moved the mouse)</li>
+            </ol>
           </p>
 
           <p>
-            I then created and annotated a lo-fi mockup of the revised website
-            with Figma!
+            For each metric, I created the following hypotheses:
           </p>
-        </div>
-        <div id="about-image">
-          <img style="width: 800px" src="img/lofi.png" alt="" />
+          <p>MISCLICK RATE</p>
+          <ul>
+            <li>Null hypothesis: The frequency with which users click something other than the correct button is about the same between version A and version B.</li>
+            <li>Alternative hypothesis: The frequency with which users click something other than the correct button is lower in version B compared to version A.</li>
+            <li>Reasoning: Since version B has the "schedule appointment" buttons highlighted in green and spacing to separate different appointments, users will be less likely to misclick on parts of the page that aren't related to their goal or on the wrong appointment.</li>
+            <li>Prediction: I predict that we will be able to reject the null hypothesis since version A has a design that makes it easy to misclick.</li>
+          </ul>
+          <p>TIME ON PAGE</p>
+          <ul>
+            <li>Null hypothesis: The total amount of time spent on the webpage is about the same between version A and version B.</li>
+            <li>Alternative hypothesis: The total amount of time spent on the webpage is greater in version A compared to version B.</li>
+            <li>Reasoning: If version B has a more intuitive design overall, then users will spend less time searching for the button they want & thus spend less time overall on the page.</li>
+            <li>Prediction: I predict that we will be able to reject the null hypothesis. However, part of this may be since users experienced version A first and thus already had some experience with the interface.</li>
+          </ul>
+          <p>MOUSE MOVE DISTANCE</p>
+          <ul>
+            <li>Null hypothesis: The amount users move the mouse is about the same between version A and version B.</li>
+            <li>Alternative hypothesis: The amount users move the mouse is greater in version A compared to version B.</li>
+            <li>Reasoning: This makes the assumption that users who are confused or looking at more parts of the page will move the mouse more to look for the correct button. If version B has a clearer design, then users will move the mouse less.</li>
+            <li>Prediction: I predict that we may fail to reject the null hypothesis because users move the mouse differently. Some users may prefer to observe a website before moving the mouse.</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="styleguide">
-      <h2>Style Guide & Hi-fi</h2>
+      <h2>Statistical Analysis</h2>
       <div id="about-container" style="flex-direction: column">
-        <div id="flexbox">
-          <img style="width: 500px" src="img/hifi_desktop_1.png" alt="" />
-          <img style="width: 500px" src="img/hifi_desktop_2.png" alt="" />
-          <img
-            style="width: 500px; object-fit: cover"
-            src="img/hifi_tablet.png"
-            alt=""
-          />
-          <img style="width: 160px" src="img/hifi_phone.png" alt="" />
-          <img style="width: 400px" src="img/styleguide.png" alt="" />
-        </div>
         <div id="about-text">
+          <p>TIME ON PAGE</p>
           <p>
-            In the hi-fi stage, I ended up changing a couple of things! Firstly,
-            I decided that having an image as the background of the header was
-            too cluttered since I wanted the focus to be on the menu items, so I
-            removed it. I additionally made the reserve button more prominent.
+            I chose to run a one-tailed t-test because we are trying to find if the time on the page is higher in A compared to B. I chose a significance level of 0.05.
           </p>
           <p>
-            For the overall style guide, I used the logo of the restaurant as a
-            reference and matched the style with modern, sleek-looking fonts and
-            colors.
+            The average time users spent on version A is 29411.25ms, while the average time users spent in version B is 10479.27ms. Overall, users spent more time on version A on average.
+          </p>
+          <p>
+            The p-value (that A>B) turned out to be 0.000566. This is lower than our significance level of 0.05, meaning that the difference between A and B with respect to the time users spent on the page is statistically significant!
+          </p>
+          <p>
+            As a result, we reject our null hypothesis. There is thus statistically significant evidence that the alternative hypothesis (users spend more time on website A compared to website B) is true.
           </p>
         </div>
       </div>
     </section>
 
     <section id="final">
-      <h2>Final Redesign</h2>
-      <div id="about-me-image" style="padding-left: 20%; padding-bottom: 50px">
-        <img style="width: 1000px" src="img/final_1.png" alt="" />
-      </div>
+      <h2>Conclusion</h2>
       <div id="about-container">
-        <div style="width: 300px">
-          <img style="width: 200px" src="img/final_mobile.png" alt="" />
-        </div>
         <div id="about-text">
-          <p>Nice! The website is looking much cleaner! :)</p>
-          <p>
-            Looking back, if I had more time, these are some things I would
-            extend and improve upon:
-          </p>
-          <ul>
-            <li>
-              Implementing sorting the menu by category! It's currently not
-              interactive.
-            </li>
-            <li>
-              Adding more personality to the website--while it's readable and
-              easier to understand, it could use an aesthetics touch-up!
-            </li>
-            <li>
-              Adding some of the extra features from the original website, such
-              as a way of indicating if a dish is spicy and the "log in" option.
-            </li>
-          </ul>
-          <p>
-            My redesign can be found at
-            <a href="https://sherry-zhang.com/fryingfish/">this link!</a>
-          </p>
         </div>
       </div>
     </section>
