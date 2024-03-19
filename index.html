@@ -24,15 +24,15 @@
       <div id="about-container">
         <div id="about-text">
           <p>
-            In this scenario, I was designing for a website (MedX) that allows
+            In this scenario, I designed for a website (MedX) that allows
             users to schedule doctor's appointments. I wanted to see if making a
             small change to the UI of the website--primarily with spacing and
             color choices--would make it more convenient and intuitive for users
             to navigate the page and book the appointment they wanted.
           </p>
           <p>
-            In other words: will changing the UI of MedX help users find and
-            book an appointment faster?
+            In other words: <span class="bold">will changing the UI of MedX help users find and
+              book an appointment faster?</span>
           </p>
 
           <p>
@@ -58,30 +58,30 @@
           <p>
             The metrics I chose to analyze were:
             <ol>
-              <li>Misclick rate (the frequency with which users click something else on the page before finding the correct button for the task)</li>
-              <li>Time on page (time spent on the webpage for each user group)</li>
-              <li>Mouse move distance (the amount they moved the mouse)</li>
+              <li><span class="bold">Misclick rate</span> (the frequency with which users click something else on the page before finding the correct button for the task)</li>
+              <li><span class="bold">Time on page</span> (time spent on the webpage for each user group)</li>
+              <li><span class="bold">Mouse move distance</span> (the amount they moved the mouse)</li>
             </ol>
           </p>
 
           <p>
-            For each metric, I created the following hypotheses:
+            For each metric, I created the following hypotheses.
           </p>
-          <p>MISCLICK RATE</p>
+          <h4>MISCLICK RATE</h4>
           <ul>
             <li>Null hypothesis: The frequency with which users click something other than the correct button is about the same between version A and version B.</li>
-            <li>Alternative hypothesis: The frequency with which users click something other than the correct button is lower in version B compared to version A.</li>
+            <li>Alternative hypothesis: The frequency with which users click something other than the correct button is different between version A and version B.</li>
             <li>Reasoning: Since version B has the "schedule appointment" buttons highlighted in green and spacing to separate different appointments, users will be less likely to misclick on parts of the page that aren't related to their goal or on the wrong appointment.</li>
-            <li>Prediction: I predict that we will be able to reject the null hypothesis since version A has a design that makes it easy to misclick.</li>
+            <li>Prediction: I predict that we will be able to reject the null hypothesis since version A has a design that makes it easy to misclick. The buttons are spaced closely together with no separation between separate appointments.</li>
           </ul>
-          <p>TIME ON PAGE</p>
+          <h4>TIME ON PAGE</h4>
           <ul>
             <li>Null hypothesis: The total amount of time spent on the webpage is about the same between version A and version B.</li>
             <li>Alternative hypothesis: The total amount of time spent on the webpage is greater in version A compared to version B.</li>
             <li>Reasoning: If version B has a more intuitive design overall, then users will spend less time searching for the button they want & thus spend less time overall on the page.</li>
             <li>Prediction: I predict that we will be able to reject the null hypothesis. However, part of this may be since users experienced version A first and thus already had some experience with the interface.</li>
           </ul>
-          <p>MOUSE MOVE DISTANCE</p>
+          <h4>MOUSE MOVE DISTANCE</h4>
           <ul>
             <li>Null hypothesis: The amount users move the mouse is about the same between version A and version B.</li>
             <li>Alternative hypothesis: The amount users move the mouse is greater in version A compared to version B.</li>
@@ -96,19 +96,28 @@
       <h2>Statistical Analysis</h2>
       <div id="about-container" style="flex-direction: column">
         <div id="about-text">
-          <p>TIME ON PAGE</p>
+          <p>I then performed statistical tests on each metric to determine if verison A and version B had significant differences in user experience.</p>
+          <h4>MISCLICK RATE</h4>
+          <p>Since miclick rate is categorical data (either true or false), I chose a chi-square test with a significance level of 0.05 to determine if there was a significant difference between page A and B.</p>
+          <p>The resulting p-value was 0.0032, a lot lower than our chosen significance level. This means that there is only a 0.32% chance that there is no difference between the two groups.</p>
+          <p>As a result, we can conclude that there is significant evidence that the alternative hypothesis is true, and we can reject the null hypothesis. In other words, <span class="bold">there is a difference in the misclick rate on version A and version B of the website.</span></p>
+          <h4>TIME ON PAGE</h4>
           <p>
-            I chose to run a one-tailed t-test because we are trying to find if the time on the page is higher in A compared to B. I chose a significance level of 0.05.
+            I chose to run a one-tailed t-test because we are trying to find if users spent more time on page A compared to B. Again, I chose a significance level of 0.05.
           </p>
           <p>
             The average time users spent on version A is 29411.25ms, while the average time users spent in version B is 10479.27ms. Overall, users spent more time on version A on average.
           </p>
           <p>
-            The p-value (that A>B) turned out to be 0.000566. This is lower than our significance level of 0.05, meaning that the difference between A and B with respect to the time users spent on the page is statistically significant!
+            The p-value (that A>B) turned out to be 0.000566. This is much lower than our significance level of 0.05, meaning that the difference between A and B with respect to the time users spent on the page is statistically significant!
           </p>
           <p>
-            As a result, we reject our null hypothesis. There is thus statistically significant evidence that the alternative hypothesis (users spend more time on website A compared to website B) is true.
+            As a result, we reject our null hypothesis. There is thus statistically significant evidence that the alternative hypothesis is true: <span class="bold">users spend more time on website A compared to website B.</span>
           </p>
+          <h4>MOUSE MOVE DISTANCE</h4>
+          <p>Similarly, I used a one-tailed t-test here--we're trying to find if users moved the mouse more in version A compared to B.</p>
+          <p>The resulting p-value was 0.00172, which is (surprisingly!) also much lower than our significance level of 0.05.</p>
+          <p>Here, we result our null hypothesis as well and can conclude that there is significant evidence that the alternative hypothesis, <span class="bold">users moved the mouse more on website A compared to B,</span> is true!</p>
         </div>
       </div>
     </section>

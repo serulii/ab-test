@@ -127,6 +127,15 @@ h3 {
   animation-fill-mode: forwards;
 }
 
+h4 {
+  color: rgb(97, 89, 94);
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
 p {
   color: rgb(84, 76, 81);
   text-align: left;
@@ -190,4 +199,8 @@ footer {
   height: 400px;
   width: auto;
   border-radius: 25px;
+}
+
+.bold {
+  font-weight: bold;
 }
