@@ -52,12 +52,14 @@ body {
 }
 
 #projects {
-  height: 50vh;
+  height: 60vh;
   padding-top: 70px;
 }
 
-#about-me-image {
-  width: 600px;
+.med-img {
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
 }
 
 #about-container {
